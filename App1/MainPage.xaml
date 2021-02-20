@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.MainPage"
+             Title="Lab1">
+
+    <StackLayout>
+        <Frame BackgroundColor="Blue" CornerRadius="0">
+            <Label Text="Введите имя, фамилию и дату вашего рождения"
+                   FontSize="16"
+                   TextColor="White"
+                   HorizontalOptions="Center"/>
+        </Frame>
+        <Entry Placeholder="Имя"
+               PlaceholderColor="Black"
+               MaxLength="15"
+               TextColor="Black"
+               Keyboard="Text"
+               ClearButtonVisibility="WhileEditing"
+               Completed="OnFirstNameEntryCompleted"/>
+        <Entry Placeholder="Фамилия" 
+               PlaceholderColor="Black"
+               MaxLength="15"
+               TextColor="Black"
+               Keyboard="Text"
+               ClearButtonVisibility="WhileEditing"
+               Completed="OnLastNameEntryCompleted"/>
+        <DatePicker MinimumDate="01/01/1900"
+                    x:Name="dataPicker"
+                    TextColor="Black"
+                    DateSelected="OnDateSelected"/>
+        <Button Text="Сколько мне лет?"
+                Clicked="OnButtonClicked"/>
+    </StackLayout>
+    
+</ContentPage>
